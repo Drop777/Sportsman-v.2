@@ -1,0 +1,81 @@
+.people {
+    display: grid;
+    grid-template-columns: repeat(4, 210px);
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+
+    font-family: Arial;
+
+    max-width: 950px;
+    margin: 0 auto;
+   
+}
+
+.photo {
+    position: relative;
+    margin: 5px;
+    border: 1px solid inherit;
+}
+
+img {
+    border-radius: 50%;
+
+    transition: border-radius 1s ease 2s;
+}
+
+.rank {
+    position: absolute;
+    top: 85px;
+    left: 160px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #8B0000;
+    vertical-align: bottom;
+    
+}
+
+.extra {
+    display: none;
+    font-weight: normal;
+}
+
+
+.details {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.person:hover .extra {
+    display: block;
+}
+
+.person:hover {
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.person:hover img {
+    border-radius: 25%;
+    transition-delay: 1s;
+}
+
+@media (max-width:999px) {
+    .people {
+        grid-template-columns: repeat(2, 210px);
+
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+}
